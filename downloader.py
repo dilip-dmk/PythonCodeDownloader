@@ -59,7 +59,7 @@ def main(args, loglevel):
             try:
                 f.write("include \"" + i + "\"\n")
             except Exception as e:
-                logging.exception('Couldn\'t write to %s.' % args.yara_meta)
+                logging.exception('Couldn\'t write to %s' % args.yara_meta)
 
 
 # python downloader.py -r debug.txt -o files/
@@ -68,7 +68,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Github file downloader")
     parser.add_argument("-r",
                         "--repo_file",
-                        default="debug.txt",
+                        default="repos.txt",
                         help="Path for the input file which contains a url of a Github repository for each separate line")
 
     parser.add_argument("-w",
